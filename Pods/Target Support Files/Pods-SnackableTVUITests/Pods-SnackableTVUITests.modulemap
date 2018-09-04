@@ -1,0 +1,6 @@
+framework module Pods_SnackableTVUITests {
+  umbrella header "Pods-SnackableTVUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,9 @@
+"ERM-19" = "You are no longer connected to Wi-Fi. To continue with this video using cellular data, click Continue Watching. Mobile data costs may apply. [19]";
+"ERM-20" = "Your app settings only allow video streaming when connected to Wi-Fi. To enable video streaming over mobile data, update your preferences. [20]";
+"ERM-26" = "Oops! No internet connection detected. [26]";
+"ERM-51" = "To continue watching this video using mobile data, click Continue. Mobile data costs may apply. [51]";
+
+"ERM-19_fr" = "Vous n'êtes plus connecté au réseau Wi-Fi. Pour poursuivre le visionnement de cette vidéo au moyen du réseau cellulaire, cliquez sur Poursuivre le visionnement. Des frais de données mobiles peuvent s’appliquer. [19]";
+"ERM-20_fr" = "Les réglages de votre application permettent la lecture vidéo seulement lorsque vous êtes connectés à un réseau Wi-Fi. Veuillez mettre à jour vos préférences pour permettre la lecture vidéo à partir de vos données mobiles. [20]";
+"ERM-26_fr" = "Oups! Aucune connexion Internet détectée. [26]";
+"ERM-51_fr" = "Cliquez sur «Continuer» pour poursuivre le visionnement de cette vidéo avec l’utilisation de vos données mobiles. Certains frais peuvent s’appliquer. [51]";

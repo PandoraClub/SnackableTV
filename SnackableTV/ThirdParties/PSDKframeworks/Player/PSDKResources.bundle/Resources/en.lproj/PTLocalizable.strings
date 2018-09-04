@@ -1,0 +1,212 @@
+/* 
+  Localizable.strings
+  MediaPlayer
+
+  Created by Venkat Jonnadula on 1/21/13.
+  Copyright (c) 2013 Adobe Systems Inc. All rights reserved.
+*/
+
+
+/* PLAYBACK_ERROR */
+"PLAYBACK_ERROR" = "Playback error.";
+
+/* INVALID_MEDIA_PLAYER_ITEM */
+"INVALID_MEDIA_PLAYER_ITEM" = "Invalid item. PTMediaPlayerItem cannot be nil.";
+
+/* M3U8_PARSER_ERROR */
+"M3U8_PARSER_ERROR" = "Could not parse m3u8.";
+
+/* M3U8_PARSER_ERROR - Description for spacing error */
+"M3U8_PARSER_ERROR_SEGMENT" = "Spacing error while parsing a content segment";
+
+/* M3U8_PARSER_ERROR - Description for spacing error */
+"M3U8_PARSER_NOT_M3U8" = "The content is not in HLS M3U8 format";
+
+/* WEBVTT_PARSER_ERROR */
+"WEBVTT_PARSER_ERROR" = "Could not parse webvtt.";
+
+/* HLS_SEGMENT_ERROR */
+"HLS_SEGMENT_ERROR" = "Segment exceeds specified bandwidth for variant.";
+
+/* MISSING_FILE_ERROR */
+"MISSING_FILE_ERROR" = "Missing file or not responding. HTTP 404: File not found.";
+
+/* NO_VALID_ALTERNATIVES */
+"NO_VALID_ALTERNATES" = "Stream has no valid alternates.";
+
+/* NATIVE_PLAYBACK_ERROR */
+"NATIVE_PLAYBACK_ERROR" = "AVPlayer native error.";
+
+/* NATIVE_ERROR */
+"NATIVE_ERROR" = "iOS native error.";
+
+/* NATIVE_PLAYBACK_ERROR - Text style error */
+"NATIVE_PLAYBACK_ERROR_TEXTSTYLE" = "Error setting text style rules.";
+
+/* NATIVE_PLAYBACK_ERROR - Text style not available */
+"NATIVE_PLAYBACK_ERROR_OS_TEXTSTYLE" = "Text Styling is available starting OSX(__MAC_10_9, __IPHONE_6_0)";
+
+/* NATIVE_PLAYBACK_ERROR - CC not available */
+"NATIVE_PLAYBACK_ERROR_OS_CC" = "Closed Caption not enabled on current iOS version";
+
+/* MBR_MEDIASEQUENCE_OFFSYNC */
+"MBR_MEDIASEQUENCE_OFFSYNC" = "The media sequence number is not on sync on all the HLS streams of this MBR.";
+
+/* PLAYBACK_STALLED */
+"PLAYBACK_STALLED" = "Playback was unable to continue because the necessary streaming media wasn’t delivered in a timely fashion over a network.";
+
+/* PLAYER_NOT_READY */
+"PLAYER_NOT_READY" = "The Player is not on ready status for using this function (see DESCRIPTION).";
+
+/* PLAYER_NOT_READY - Not ready for accesing alternate tracks */
+"PLAYER_NOT_READY_AA" = "Error while accessing alternate audio tracks. PTMediaPlayer is not ready.";
+
+/* PLAYER_NOT_READY - Not ready for accesing subtitles tracks */
+"PLAYER_NOT_READY_CC" = "Error while accessing subtitles tracks. PTMediaPlayer is not ready.";
+
+/* PLAYER_NOT_READY - Not ready for accesing alternate tracks */
+"PLAYER_NOT_READY_GENERAL" = "Error while accessing alternate tracks. PTMediaPlayer is not ready.";
+
+/* AD_EMPTY_RESPONSE */
+"AD_EMPTY_RESPONSE" = "Could not retrieve ads. Empty response.";
+
+/* AD_TIMEOUT */
+"AD_TIMEOUT" = "Could not retrieve ads. Timeout error.";
+
+/* AD_UNREACHABLE */
+"AD_UNREACHABLE" = "Could not retrieve ads. No response.";
+
+/* AD_RESOLVER_METADATA_INVALID */
+"AD_RESOLVER_METADATA_INVALID" = "PTAuditudeMetadata is either nil or contains invalid parameters.";
+
+/* AD_RESOLVER_FAIL */
+"AD_RESOLVER_FAIL" = "AdResolver encountered an error while resolving ads.";
+
+/* AD_RESOLVER_RETURNED_NO_ADS */
+"AD_RESOLVER_RETURNED_NO_ADS" = "AdResolver did not return any ads.";
+
+/* AD_HLS_VERSION_INCOMPATIBLE */
+"AD_HLS_VERSION_INCOMPATIBLE" = "The HLS version of the ads are highter than the HLS version of the content.";
+
+/* AD_TARGET_DURATION_INCOMPATIBLE */
+"AD_TARGET_DURATION_INCOMPATIBLE" = "The TARGET DURATION of the ad is greater than the TARGET DURATION of the content.";
+
+/* AD_HLS_AUDIOONLY_MISSING */
+"AD_HLS_AUDIOONLY_MISSING" = "Ad does not contain Audio Only Stream.";
+
+/* AD_HLS_MATCHING_BITRATE_MISSING */
+"AD_HLS_MATCHING_BITRATE_MISSING" = "No matching ad stream found for content's current bitrate.";
+
+/* AD_NOT_INSERTED */
+"AD_NOT_INSERTED" = "AD was not inserted on the stream.";
+
+/* AD_INSERTION_FAIL */
+"AD_INSERTION_FAIL" = "There was an error while inserting the ads.";
+
+/* DRM_ERROR */
+"DRM_ERROR" = "Error playing protected stream. FAXS error.";
+
+/* DRM_ERROR_NO_FAXS_ARGUMENT*/
+"DRM_ERROR_NO_FAXS_ARGUMENT" = "The provided item is not a DRM compatible URL. Did you forget to add the faxs=1 argument at the URL?";
+
+/* DRM_ERROR_WRONG_WORKFLOW*/
+"DRM_ERROR_WRONG_WORKFLOW" = "The DRM workflow already started or the item was preloaded already. Don't call loadDRMMetadataWithCompletionHandler:errorHandler: on the player before loading the drm.";
+
+/* DRM_ERROR_UNSUPPORTED_PLAYLIST*/
+"DRM_ERROR_UNSUPPORTED_PLAYLIST" = "The URL is not a supported DRM playlist. Don't add faxs=1 argument in the URL of a non DRM protected stream.";
+
+/* AVASSET_FAILED_TO_CREATE */
+"AVASSET_FAILED_TO_CREATE" = "Error at creating the AVAsset.";
+
+/* NETWORK_ERROR */
+"NETWORK_ERROR" = "Error getting data from the network.";
+
+/* SEEK_ERROR */
+"SEEK_ERROR" = "Error while seeking.";
+
+/* SEEK_ERROR - Not valid time*/
+"SEEK_ERROR_INVALID_TIME" = "The time provided is invalid.";
+
+/* PAUSE_ERROR */
+"PAUSE_ERROR" = "Error while pausing.";
+
+/* AUDIO_TRACK_CHANGE_FAIL */
+"AUDIO_TRACK_CHANGE_FAIL" = "Error while changing the audio track.";
+
+/* SUBTITLES_TRACK_CHANGE_FAIL */
+"SUBTITLES_TRACK_CHANGE_FAIL" = "Error while changing the subtitles track.";
+
+/* SET_CC_STYLING_ERROR */
+"SET_CC_STYLING_ERROR" = "Error setting the subtitles styling.";
+
+/* SET_CC_VISIBILITY_ERROR */
+"SET_CC_VISIBILITY_ERROR" = "Error setting the closed captions visibility.";
+
+/* PLAYBACK_START */
+"PLAYBACK_START" = "Playback started.";
+
+/* PLAYBACK_COMPLETE */
+"PLAYBACK_COMPLETE" = "Playback completed.";
+
+/* SEEK_START */
+"SEEK_START" = "Seek started.";
+
+/* SEEK_COMPLETE */
+"SEEK_COMPLETE" = "Seek completed.";
+
+/* CONTENT_CHANGE */
+"CONTENT_CHANGE" = "Used to notify that the current playback time has crossed the border between main/alternate content.";
+
+/* PLAYER_STATE_CHANGE */
+"PLAYER_STATE_CHANGE" = "PTMediaPlayer state changed.";
+
+/* AD_BREAK_START */
+"AD_BREAK_START" = "Ad break started.";
+
+/* AD_BREAK_COMPLETE */
+"AD_BREAK_COMPLETE" = "Ad break completed.";
+
+/* AD_START */
+"AD_START" = "Ad started.";
+
+/* AD_COMPLETE */
+"AD_COMPLETE" = "Ad completed.";
+
+/* AD_PROGRESS */
+"AD_PROGRESS" = "Ad progress.";
+
+/* AD_ASSET_FAILED_TO_LOAD */
+"AD_ASSET_FAILED_TO_LOAD" = "hls asset failed to load manifests";
+
+/* AUDIO_TRACK_CHANGE */
+"AUDIO_TRACK_CHANGE" = "Audio track changed.";
+
+/* SUBTITLES_TRACK_CHANGE */
+"SUBTITLES_TRACK_CHANGE" = "Subtitles track changed.";
+
+/* BITRATE_CHANGE */
+"BITRATE_CHANGE" = "The current bitrate has changed.";
+
+/* EXCEPTION_INVALID_ITEM */
+"EXCEPTION_INVALID_ITEM" = "The current item is invalid or nil.";
+
+/* ARGUMENT_ERROR */
+"ARGUMENT_ERROR" = "Argument error.";
+
+/* ILLEGAL_OPERATION_ERROR */
+"ILLEGAL_OPERATION_ERROR" = "Illegal operation error.";
+
+/* BACKGROUND_MANIFEST_WARNING */
+"BACKGROUND_MANIFEST_WARNING" = "BACKGROUND_MANIFEST_WARNING: Error in background manifest download.";
+
+/*INVALID_SEEK_WARNING */
+"INVALID_SEEK_WARNING" = "INVALID_SEEK_WARNING: Attempt to seek into nonSeekableRanges ranges set in PTBlackoutMetadata";
+
+/*INVALID_TIME_RANGES */
+"UNDEFINED_TIME_RANGES" = "The ad signaling mode is defined as custom ranges but the custom ranges are not defined.";
+
+/*INVALID_TIME_RANGES */
+"INVALID_TIME_RANGES" = "One or more time ranges are invalid and will be ignored or modified.";
+
+/*INVALID_TIME_RANGES_OUT_OF_TIMELINE */
+"INVALID_TIME_RANGES_OUT_OF_TIMELINE" = "The following ranges are invalid or out of current timeline:";

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ACBase" representedClassName="ACBase" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="STCollection" representedClassName="STCollection" parentEntity="ACBase" syncable="YES">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isAutoGen" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="itemsType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="STContent" representedClassName="STContent" parentEntity="ACBase" syncable="YES">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="genres" optional="YES" attributeType="Transformable" valueTransformerName="kSTJsonGenresTransformer" syncable="YES"/>
+        <attribute name="images" optional="YES" attributeType="Transformable" valueTransformerName="kSTJsonImagesTransformer" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shortDesc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="packages" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="STContentPackage" inverseName="content" inverseEntity="STContentPackage" syncable="YES"/>
+    </entity>
+    <entity name="STContentPackage" representedClassName="STContentPackage" parentEntity="ACBase" syncable="YES">
+        <attribute name="contentId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="images" optional="YES" attributeType="Transformable" valueTransformerName="kSTJsonImagesTransformer" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scheduleEnd" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="scheduleStart" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="content" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="STContent" inverseName="packages" inverseEntity="STContent" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ACBase" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="STCollection" positionX="-36" positionY="45" width="128" height="105"/>
+        <element name="STContent" positionX="-63" positionY="-9" width="128" height="150"/>
+        <element name="STContentPackage" positionX="-54" positionY="0" width="128" height="165"/>
+    </elements>
+</model>

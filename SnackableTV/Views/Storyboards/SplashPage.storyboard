@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-SemiBold.otf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="z2s-yJ-8rj">
+            <objects>
+                <viewController storyboardIdentifier="splashVC" id="K4w-FR-x1Y" customClass="STSplashViewController" customModule="SnackableTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZVG-nk-jS3"/>
+                        <viewControllerLayoutGuide type="bottom" id="rB5-t6-Cu3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AN5-c4-QGb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVB-IC-O53" userLabel="canvasView" customClass="STMosaicsView" customModule="SnackableTV" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9d4-Qo-WMF" userLabel="overlayView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1G-fW-3An" userLabel="stage1View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snackableLaunchLogo" translatesAutoresizingMaskIntoConstraints="NO" id="zS3-Si-Dlo">
+                                        <rect key="frame" x="158.5" y="278.5" width="58" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zS3-Si-Dlo" secondAttribute="height" multiplier="29:55" id="gvS-2D-tR1"/>
+                                            <constraint firstAttribute="width" constant="58" id="lwA-AR-CoC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBg-EU-6ha" userLabel="descView">
+                                        <rect key="frame" x="40" y="767" width="295" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to SnackableTV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtK-J3-lkM">
+                                                <rect key="frame" x="19" y="27" width="258" height="24"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7T7-Jf-akZ">
+                                                <rect key="frame" x="0.0" y="66" width="295" height="33.5"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Quality bite-sized entertainment from the brands you love">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="dtK-J3-lkM" firstAttribute="top" secondItem="gBg-EU-6ha" secondAttribute="top" constant="27" id="6s0-bn-8xD"/>
+                                            <constraint firstItem="dtK-J3-lkM" firstAttribute="centerX" secondItem="gBg-EU-6ha" secondAttribute="centerX" id="POx-bm-DS3"/>
+                                            <constraint firstAttribute="height" constant="100" id="RN3-1p-Dq0"/>
+                                            <constraint firstItem="7T7-Jf-akZ" firstAttribute="leading" secondItem="gBg-EU-6ha" secondAttribute="leading" id="VHw-kC-ggS"/>
+                                            <constraint firstItem="7T7-Jf-akZ" firstAttribute="centerX" secondItem="dtK-J3-lkM" secondAttribute="centerX" id="eHw-PX-pEU"/>
+                                            <constraint firstAttribute="trailing" secondItem="7T7-Jf-akZ" secondAttribute="trailing" id="nGS-hu-8Mq"/>
+                                            <constraint firstItem="7T7-Jf-akZ" firstAttribute="top" secondItem="dtK-J3-lkM" secondAttribute="bottom" constant="15" id="nxx-De-KqB"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZ2-Me-BtA" customClass="ACBorderedButton" customModule="SnackableTV" customModuleProvider="target">
+                                        <rect key="frame" x="37" y="725" width="300" height="42"/>
+                                        <color key="backgroundColor" red="0.0" green="0.53333333329999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="oYU-ib-ly8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
+                                        <state key="normal" title="START SNACKING">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="21"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="K4w-FR-x1Y" eventType="touchUpInside" id="Wsu-sh-1qp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="VZ2-Me-BtA" firstAttribute="leading" secondItem="Q1G-fW-3An" secondAttribute="leading" constant="37" id="5JU-pp-4z0"/>
+                                    <constraint firstItem="gBg-EU-6ha" firstAttribute="centerX" secondItem="Q1G-fW-3An" secondAttribute="centerX" id="6jT-CI-uJQ"/>
+                                    <constraint firstItem="VZ2-Me-BtA" firstAttribute="centerX" secondItem="Q1G-fW-3An" secondAttribute="centerX" id="BYY-WE-s9A"/>
+                                    <constraint firstAttribute="trailing" secondItem="VZ2-Me-BtA" secondAttribute="trailing" constant="38" id="MhT-SE-CkZ"/>
+                                    <constraint firstItem="zS3-Si-Dlo" firstAttribute="centerX" secondItem="Q1G-fW-3An" secondAttribute="centerX" id="N9P-Mt-DPv"/>
+                                    <constraint firstItem="gBg-EU-6ha" firstAttribute="leading" secondItem="Q1G-fW-3An" secondAttribute="leading" constant="40" id="S53-XW-nVR"/>
+                                    <constraint firstAttribute="bottom" secondItem="VZ2-Me-BtA" secondAttribute="bottom" constant="-100" id="Sbo-IE-f6Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="gBg-EU-6ha" secondAttribute="trailing" constant="40" id="cid-TH-LTi"/>
+                                    <constraint firstAttribute="bottom" secondItem="gBg-EU-6ha" secondAttribute="bottom" constant="-200" id="lXD-tE-C7d"/>
+                                    <constraint firstItem="zS3-Si-Dlo" firstAttribute="centerY" secondItem="Q1G-fW-3An" secondAttribute="centerY" id="lbL-yG-qJQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rB5-t6-Cu3" firstAttribute="top" secondItem="Q1G-fW-3An" secondAttribute="bottom" id="6qA-1B-eXE"/>
+                            <constraint firstItem="Q1G-fW-3An" firstAttribute="leading" secondItem="AN5-c4-QGb" secondAttribute="leading" id="G28-9D-jbx"/>
+                            <constraint firstItem="9d4-Qo-WMF" firstAttribute="trailing" secondItem="IVB-IC-O53" secondAttribute="trailing" id="GNs-vJ-Rg9"/>
+                            <constraint firstItem="IVB-IC-O53" firstAttribute="top" secondItem="ZVG-nk-jS3" secondAttribute="bottom" id="O0B-wh-0rp"/>
+                            <constraint firstItem="rB5-t6-Cu3" firstAttribute="top" secondItem="IVB-IC-O53" secondAttribute="bottom" id="g9q-fw-Px2"/>
+                            <constraint firstItem="9d4-Qo-WMF" firstAttribute="leading" secondItem="IVB-IC-O53" secondAttribute="leading" id="gFZ-pN-HeG"/>
+                            <constraint firstItem="9d4-Qo-WMF" firstAttribute="top" secondItem="IVB-IC-O53" secondAttribute="top" id="pwh-sR-jKp"/>
+                            <constraint firstItem="Q1G-fW-3An" firstAttribute="top" secondItem="ZVG-nk-jS3" secondAttribute="bottom" id="q1c-S0-fMs"/>
+                            <constraint firstAttribute="trailing" secondItem="IVB-IC-O53" secondAttribute="trailing" id="sdR-pi-LkP"/>
+                            <constraint firstAttribute="trailing" secondItem="Q1G-fW-3An" secondAttribute="trailing" id="uZu-qx-pFt"/>
+                            <constraint firstItem="9d4-Qo-WMF" firstAttribute="bottom" secondItem="IVB-IC-O53" secondAttribute="bottom" id="vVT-hc-6kO"/>
+                            <constraint firstItem="IVB-IC-O53" firstAttribute="leading" secondItem="AN5-c4-QGb" secondAttribute="leading" id="vsO-Yv-OH3"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonConstraintBottom" destination="Sbo-IE-f6Z" id="TWh-oc-fse"/>
+                        <outlet property="canvasView" destination="IVB-IC-O53" id="l2w-kd-PPW"/>
+                        <outlet property="descView" destination="gBg-EU-6ha" id="I51-CA-bHd"/>
+                        <outlet property="descViewConstraintBottom" destination="lXD-tE-C7d" id="mri-FH-cTc"/>
+                        <outlet property="logoImageView" destination="zS3-Si-Dlo" id="6Qz-XU-fVy"/>
+                        <outlet property="logoImageViewConstraintWidth" destination="lwA-AR-CoC" id="aD9-lx-Pyg"/>
+                        <outlet property="overlayView" destination="9d4-Qo-WMF" id="tog-M6-rai"/>
+                        <outlet property="stage1View" destination="Q1G-fW-3An" id="E59-h5-IXY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h9D-l1-MpU" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="snackableLaunchLogo" width="74" height="125"/>
+    </resources>
+</document>

@@ -1,0 +1,74 @@
+PODS:
+  - Alamofire (4.4.0)
+  - AlamofireObjectMapper (4.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 2.0)
+  - Crashlytics (3.8.4):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.11)
+  - Floaty (3.0.0)
+  - Gigya-iOS-SDK (3.5.3)
+  - HockeySDK (4.1.4):
+    - HockeySDK/DefaultLib (= 4.1.4)
+  - HockeySDK/DefaultLib (4.1.4)
+  - Locksmith (3.0.0)
+  - ObjectMapper (2.2.5)
+  - RxCocoa (3.4.0):
+    - RxSwift (~> 3.4)
+  - RxSwift (3.4.0)
+  - RZTransitions (1.2.1)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - UrbanAirship-iOS-SDK (8.2.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireObjectMapper (~> 4.0)
+  - Crashlytics
+  - Fabric
+  - Floaty (from `https://github.com/austinzmchen/Floaty.git`, branch `release/ACCustomUI_1.3.1`)
+  - Gigya-iOS-SDK (= 3.5.3)
+  - HockeySDK (~> 4.1.4)
+  - Locksmith
+  - RxCocoa
+  - RxSwift
+  - RZTransitions (from `https://github.com/austinzmchen/RZTransitions.git`, branch `release/ACCustomUI_1.1.3`)
+  - SDWebImage
+  - UrbanAirship-iOS-SDK
+
+EXTERNAL SOURCES:
+  Floaty:
+    :branch: release/ACCustomUI_1.3.1
+    :git: https://github.com/austinzmchen/Floaty.git
+  RZTransitions:
+    :branch: release/ACCustomUI_1.1.3
+    :git: https://github.com/austinzmchen/RZTransitions.git
+
+CHECKOUT OPTIONS:
+  Floaty:
+    :commit: 13603f2cf7fa04dd0c631ec8ccc426b8b9f763a4
+    :git: https://github.com/austinzmchen/Floaty.git
+  RZTransitions:
+    :commit: 8a088be064d29f91d8398ad44f6b7a2b441d6340
+    :git: https://github.com/austinzmchen/RZTransitions.git
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
+  Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  Floaty: e37e969b7c143471d860f72d9c4175f317a6e023
+  Gigya-iOS-SDK: 17f47655ea0cfdeef440e0a539713380936739ab
+  HockeySDK: 78a3f8bb9100277b531defc56c970369a3ca267a
+  Locksmith: 310b4cc5031af5728bf4db5d4de547a5100c6a3b
+  ObjectMapper: fb30f71e08470d1e5a20b199fafe1246281db898
+  RxCocoa: d14ef6b6029e1ddc6e966508c09289090de68ff9
+  RxSwift: 3789a1af753002a14edecdb698a2424624296a9c
+  RZTransitions: 0e0013fda6989ee84dc5e44dca79fd539e1a975a
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  UrbanAirship-iOS-SDK: b73b08b28f1b1366b671da21fac261072ef3fe19
+
+PODFILE CHECKSUM: aa6f81a83e9a5e90e0bcb6984cdb4f83999dbc6c
+
+COCOAPODS: 1.1.1

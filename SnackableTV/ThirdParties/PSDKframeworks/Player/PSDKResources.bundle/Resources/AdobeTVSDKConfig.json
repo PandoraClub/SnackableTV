@@ -1,0 +1,30 @@
+{
+	"ads":{
+		"rules":{
+			"default":[
+					   {
+					   "type":"priority",
+					   "priority":[
+								   "application/x-mpegurl",
+								   "application/vnd.apple.mpegurl",
+								   "application/javascript",
+								   "video/mp4",
+								   "video/m4v",
+								   "video/x-flv",
+								   "video/webm"
+								   ]
+					   },
+					   {
+					   "type":"normalize",
+					   "item":"host",
+					   "matches":"ew",
+					   "values":[
+								 "redirector.gvt1.com"
+								 ],
+					   "find":"videoplayback/(.*?)/expire/.*?/(.*?)/signature/.*?/",
+					   "replace":"videoplayback/$1/expire//$2/signature//"
+					   }
+					   ]
+		}
+	}
+}

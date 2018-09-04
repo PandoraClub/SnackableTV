@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ACBase" representedClassName="ACBase" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="STCollection" representedClassName="STCollection" parentEntity="ACBase" syncable="YES">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isAutoGen" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="itemsType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="childCollections" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="STCollection" inverseName="parentCollection" inverseEntity="STCollection" syncable="YES"/>
+        <relationship name="contents" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="STContent" inverseName="collections" inverseEntity="STContent" syncable="YES"/>
+        <relationship name="medias" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="STMedia" inverseName="collections" inverseEntity="STMedia" syncable="YES"/>
+        <relationship name="parentCollection" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="STCollection" inverseName="childCollections" inverseEntity="STCollection" syncable="YES"/>
+    </entity>
+    <entity name="STContent" representedClassName="STContent" parentEntity="ACBase" syncable="YES">
+        <attribute name="agvotCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="broadcastDateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="contentPackages" optional="YES" attributeType="Transformable" valueTransformerName="kSTJsonContentPackagesTransformer" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="episode" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="genres" optional="YES" attributeType="Transformable" valueTransformerName="kSTJsonGenresTransformer" syncable="YES"/>
+        <attribute name="images" optional="YES" attributeType="Transformable" valueTransformerName="kSTJsonImagesTransformer" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qfrCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shortDesc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="collections" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="STCollection" inverseName="contents" inverseEntity="STCollection" syncable="YES"/>
+        <relationship name="media" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="STMedia" inverseName="contents" inverseEntity="STMedia" syncable="YES"/>
+        <relationship name="packages" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="STContentPackage" inverseName="content" inverseEntity="STContentPackage" syncable="YES"/>
+        <relationship name="watchedContent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="STWatchedContent" inverseName="content" inverseEntity="STWatchedContent" syncable="YES"/>
+    </entity>
+    <entity name="STContentPackage" representedClassName="STContentPackage" parentEntity="ACBase" syncable="YES">
+        <attribute name="contentId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="images" optional="YES" attributeType="Transformable" valueTransformerName="kSTJsonImagesTransformer" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scheduleEnd" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="scheduleStart" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="content" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="STContent" inverseName="packages" inverseEntity="STContent" syncable="YES"/>
+    </entity>
+    <entity name="STMedia" representedClassName="STMedia" parentEntity="ACBase" syncable="YES">
+        <attribute name="agvotCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="containsSeasons" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dfpName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="genres" optional="YES" attributeType="Transformable" valueTransformerName="kSTJsonGenresTransformer" syncable="YES"/>
+        <attribute name="images" optional="YES" attributeType="Transformable" valueTransformerName="kSTJsonImagesTransformer" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qfrCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shortDesc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="collections" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="STCollection" inverseName="medias" inverseEntity="STCollection" syncable="YES"/>
+        <relationship name="contents" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="STContent" inverseName="media" inverseEntity="STContent" syncable="YES"/>
+        <relationship name="seasons" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="STSeason" inverseName="media" inverseEntity="STSeason" syncable="YES"/>
+    </entity>
+    <entity name="STSeason" representedClassName="STSeason" parentEntity="ACBase" syncable="YES">
+        <attribute name="images" optional="YES" attributeType="Transformable" valueTransformerName="kSTJsonImagesTransformer" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="media" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="STMedia" inverseName="seasons" inverseEntity="STMedia" syncable="YES"/>
+    </entity>
+    <entity name="STWatchedContent" representedClassName="STWatchedContent" syncable="YES">
+        <attribute name="progressPercentage" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="startedTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="updatedTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="content" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="STContent" inverseName="watchedContent" inverseEntity="STContent" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ACBase" positionX="-279" positionY="93" width="128" height="75"/>
+        <element name="STCollection" positionX="-297" positionY="294" width="128" height="165"/>
+        <element name="STContent" positionX="34" positionY="534" width="128" height="270"/>
+        <element name="STContentPackage" positionX="36" positionY="801" width="128" height="165"/>
+        <element name="STMedia" positionX="162" positionY="81" width="128" height="240"/>
+        <element name="STSeason" positionX="349" positionY="417" width="128" height="105"/>
+        <element name="STWatchedContent" positionX="-90" positionY="27" width="128" height="105"/>
+    </elements>
+</model>

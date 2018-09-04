@@ -1,0 +1,6 @@
+framework module PSDKLibrary { 
+	umbrella header "PSDKLibrary.h" 
+	export * 
+	module * { export * } 
+}
+

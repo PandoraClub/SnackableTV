@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Light.otf">
+            <string>Montserrat-Light</string>
+        </array>
+        <array key="Montserrat-SemiBold.otf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="STVideoPlayerView" customModule="SnackableTV" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="aL1-Hi-pLt"/>
+                <outlet property="controlsView" destination="UpM-dQ-IXC" id="eLT-yx-W1r"/>
+                <outlet property="coverContainerView" destination="Vjx-F6-Itd" id="Jd1-Eo-yTq"/>
+                <outlet property="coverImageView" destination="XdB-y7-YSb" id="h7P-TG-BQQ"/>
+                <outlet property="coverLengthLabel" destination="Mku-VX-VtN" id="gKo-qX-md4"/>
+                <outlet property="coverTitleLabel" destination="Xa7-79-hcI" id="TTD-1o-YYy"/>
+                <outlet property="durationLabel" destination="fYh-Hy-866" id="UGC-8S-ZjK"/>
+                <outlet property="pauseResumeButton" destination="cyg-Vh-Kaa" id="87A-VN-bke"/>
+                <outlet property="playButton" destination="B6k-h6-uQ4" id="vI3-gM-vHB"/>
+                <outlet property="progressBarView" destination="QuR-N6-hzP" id="gwc-Jr-8x9"/>
+                <outlet property="rotateButton" destination="Yje-8C-SiF" id="SI1-tb-S9s"/>
+                <outlet property="titleLabel" destination="0x8-Ei-OR9" id="fAg-zY-qlI"/>
+                <outlet property="videoCanvasView" destination="Lpu-7t-01z" id="jF3-XE-E5e"/>
+                <outlet property="volumeButton" destination="0No-3C-G28" id="bUW-1o-bIz"/>
+                <outlet property="watchMoreTimerProgressView" destination="1wB-1U-zVP" id="Ri2-dD-Ift"/>
+                <outlet property="watchMoreTitleLabel" destination="UAj-Rp-Xgb" id="o1P-vA-gvr"/>
+                <outlet property="watchMoreView" destination="Alf-Oi-9yE" id="Da0-59-v6z"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lpu-7t-01z" userLabel="videoCanvasView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                    <color key="backgroundColor" red="0.074509803921568626" green="0.074509803921568626" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vjx-F6-Itd" userLabel="coverView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XO1-qk-lRW" userLabel="gradientBottomView" customClass="ACGradientBorderedView" customModule="SnackableTV" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="125" width="375" height="125"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="colorA">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="colorB">
+                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="XdB-y7-YSb" userLabel="coverImageView">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mku-VX-VtN" userLabel="coverLengthLabel">
+                            <rect key="frame" x="15" y="230" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xa7-79-hcI" userLabel="coverTitleLabel">
+                            <rect key="frame" x="15" y="235" width="257" height="0.0"/>
+                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6k-h6-uQ4" userLabel="playButton">
+                            <rect key="frame" x="292" y="167" width="68" height="68"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="68" id="2Ju-QE-ylL"/>
+                                <constraint firstAttribute="height" constant="68" id="kk3-hd-5VB"/>
+                            </constraints>
+                            <state key="normal" image="playerPlay"/>
+                            <connections>
+                                <action selector="playButtonTapped:" destination="-1" eventType="touchUpInside" id="zb7-S8-Sjh"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="XO1-qk-lRW" secondAttribute="trailing" id="019-SA-Ji3"/>
+                        <constraint firstAttribute="bottom" secondItem="XO1-qk-lRW" secondAttribute="bottom" id="0wj-rD-0yA"/>
+                        <constraint firstItem="Xa7-79-hcI" firstAttribute="leading" secondItem="Vjx-F6-Itd" secondAttribute="leading" constant="15" id="3am-Ut-nsJ"/>
+                        <constraint firstItem="XO1-qk-lRW" firstAttribute="leading" secondItem="Vjx-F6-Itd" secondAttribute="leading" id="6sc-p9-SWD"/>
+                        <constraint firstItem="B6k-h6-uQ4" firstAttribute="leading" secondItem="Xa7-79-hcI" secondAttribute="trailing" constant="20" id="Jcf-V8-QaK"/>
+                        <constraint firstAttribute="bottom" secondItem="XdB-y7-YSb" secondAttribute="bottom" id="Qkq-rm-Ayw"/>
+                        <constraint firstItem="XO1-qk-lRW" firstAttribute="height" secondItem="Vjx-F6-Itd" secondAttribute="height" multiplier="0.5" id="TEu-2B-Vge"/>
+                        <constraint firstItem="Mku-VX-VtN" firstAttribute="leading" secondItem="Xa7-79-hcI" secondAttribute="leading" id="V4N-Sj-od2"/>
+                        <constraint firstItem="XdB-y7-YSb" firstAttribute="top" secondItem="Vjx-F6-Itd" secondAttribute="top" id="ZQA-xP-S0j"/>
+                        <constraint firstAttribute="bottom" secondItem="B6k-h6-uQ4" secondAttribute="bottom" constant="15" id="hES-5n-gKI"/>
+                        <constraint firstAttribute="trailing" secondItem="XdB-y7-YSb" secondAttribute="trailing" id="lvV-bM-eN4"/>
+                        <constraint firstAttribute="trailing" secondItem="B6k-h6-uQ4" secondAttribute="trailing" constant="15" id="nUt-AK-87E"/>
+                        <constraint firstAttribute="bottom" secondItem="Xa7-79-hcI" secondAttribute="bottom" constant="15" id="oEX-vn-uwU"/>
+                        <constraint firstItem="XdB-y7-YSb" firstAttribute="leading" secondItem="Vjx-F6-Itd" secondAttribute="leading" id="rA8-tJ-HEW"/>
+                        <constraint firstItem="Xa7-79-hcI" firstAttribute="top" secondItem="Mku-VX-VtN" secondAttribute="bottom" constant="5" id="yng-Fj-5ir"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UpM-dQ-IXC" userLabel="controlsView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                    <subviews>
+                        <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IkD-Hz-TfF" userLabel="gradientTopView" customClass="ACGradientBorderedView" customModule="SnackableTV" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="colorA">
+                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="colorB">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9U-eF-SZq" userLabel="gradientBottomView" customClass="ACGradientBorderedView" customModule="SnackableTV" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="125" width="375" height="125"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="colorA">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="colorB">
+                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QuR-N6-hzP" userLabel="progressBarView" customClass="STProgressBarView" customModule="SnackableTV" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="3"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="3" id="zdT-1y-Xxp"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-1:35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYh-Hy-866" userLabel="DurationLabel">
+                            <rect key="frame" x="328" y="15" width="32" height="16"/>
+                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0x8-Ei-OR9" userLabel="TitleLabel">
+                            <rect key="frame" x="15" y="235" width="257" height="0.0"/>
+                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yje-8C-SiF" userLabel="rotateButton">
+                            <rect key="frame" x="340" y="15" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="D30-oz-dAF"/>
+                                <constraint firstAttribute="height" constant="20" id="x86-tf-NLU"/>
+                            </constraints>
+                            <state key="normal" image="playerRotate"/>
+                            <connections>
+                                <action selector="rotateButtonTapped:" destination="-1" eventType="touchUpInside" id="ZSp-Ic-sLJ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0No-3C-G28" userLabel="volumeButton">
+                            <rect key="frame" x="55" y="215" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="b0W-bm-1kf"/>
+                                <constraint firstAttribute="height" constant="20" id="lsC-UK-2JJ"/>
+                            </constraints>
+                            <state key="normal" image="playerVolume"/>
+                            <connections>
+                                <action selector="volumeButtonTapped:" destination="-1" eventType="touchUpInside" id="V4A-or-0kI"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyg-Vh-Kaa" userLabel="pauseResumeButton">
+                            <rect key="frame" x="292" y="167" width="68" height="68"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="68" id="etK-UC-q8T"/>
+                                <constraint firstAttribute="height" constant="68" id="nDK-iA-Da4"/>
+                            </constraints>
+                            <state key="normal" image="playerPause"/>
+                            <connections>
+                                <action selector="pauseResumeButtonTapped:" destination="-1" eventType="touchUpInside" id="jJr-hQ-slN"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="cyg-Vh-Kaa" secondAttribute="bottom" constant="15" id="093-oB-Aqy"/>
+                        <constraint firstItem="Yje-8C-SiF" firstAttribute="top" secondItem="UpM-dQ-IXC" secondAttribute="top" constant="15" id="A6p-ai-AGg"/>
+                        <constraint firstItem="fYh-Hy-866" firstAttribute="top" secondItem="UpM-dQ-IXC" secondAttribute="top" constant="15" id="L8Q-W7-Bdr"/>
+                        <constraint firstItem="d9U-eF-SZq" firstAttribute="height" secondItem="IkD-Hz-TfF" secondAttribute="height" id="MDF-nW-uUN"/>
+                        <constraint firstItem="IkD-Hz-TfF" firstAttribute="top" secondItem="UpM-dQ-IXC" secondAttribute="top" id="NYp-ad-z6k"/>
+                        <constraint firstAttribute="bottom" secondItem="0x8-Ei-OR9" secondAttribute="bottom" constant="15" id="O08-3K-RE2"/>
+                        <constraint firstAttribute="trailing" secondItem="Yje-8C-SiF" secondAttribute="trailing" constant="15" id="PUB-ar-GP8"/>
+                        <constraint firstAttribute="trailing" secondItem="fYh-Hy-866" secondAttribute="trailing" constant="15" id="Qb0-aA-lZb"/>
+                        <constraint firstItem="cyg-Vh-Kaa" firstAttribute="leading" secondItem="0x8-Ei-OR9" secondAttribute="trailing" constant="20" id="T1g-D7-cld"/>
+                        <constraint firstItem="d9U-eF-SZq" firstAttribute="leading" secondItem="IkD-Hz-TfF" secondAttribute="leading" id="VtQ-Ri-LNb"/>
+                        <constraint firstItem="QuR-N6-hzP" firstAttribute="leading" secondItem="UpM-dQ-IXC" secondAttribute="leading" id="YZW-BV-HAo"/>
+                        <constraint firstItem="d9U-eF-SZq" firstAttribute="top" secondItem="IkD-Hz-TfF" secondAttribute="bottom" id="Zzv-G2-Ona"/>
+                        <constraint firstItem="IkD-Hz-TfF" firstAttribute="leading" secondItem="UpM-dQ-IXC" secondAttribute="leading" id="ctC-lP-RhB"/>
+                        <constraint firstItem="QuR-N6-hzP" firstAttribute="top" secondItem="UpM-dQ-IXC" secondAttribute="top" id="eZT-Oz-wAR"/>
+                        <constraint firstItem="IkD-Hz-TfF" firstAttribute="height" secondItem="UpM-dQ-IXC" secondAttribute="height" multiplier="0.5" id="fni-oT-sxN"/>
+                        <constraint firstItem="d9U-eF-SZq" firstAttribute="trailing" secondItem="IkD-Hz-TfF" secondAttribute="trailing" id="o9N-30-bZg"/>
+                        <constraint firstAttribute="trailing" secondItem="IkD-Hz-TfF" secondAttribute="trailing" id="p1c-jZ-Vyu"/>
+                        <constraint firstAttribute="trailing" secondItem="cyg-Vh-Kaa" secondAttribute="trailing" constant="15" id="vDH-zP-EMk"/>
+                        <constraint firstItem="0x8-Ei-OR9" firstAttribute="leading" secondItem="UpM-dQ-IXC" secondAttribute="leading" constant="15" id="xF6-qV-SPC"/>
+                        <constraint firstAttribute="trailing" secondItem="QuR-N6-hzP" secondAttribute="trailing" id="zxK-8T-7d8"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="Yje-8C-SiF"/>
+                            <exclude reference="0No-3C-G28"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Alf-Oi-9yE" userLabel="watchMoreView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1wB-1U-zVP" userLabel="watchMoreTimerProgressView" customClass="STProgressBarView" customModule="SnackableTV" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="3"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="3" id="UPK-rs-q9B"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want to watch more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iT-xv-jy2" userLabel="topLabel">
+                            <rect key="frame" x="85.5" y="85.5" width="203" height="24.5"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAj-Rp-Xgb" userLabel="titleLabel">
+                            <rect key="frame" x="159.5" y="113" width="55" height="24.5"/>
+                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKc-hW-vPX" customClass="ACBorderedButton" customModule="SnackableTV" customModuleProvider="target">
+                            <rect key="frame" x="113.5" y="150.5" width="147" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="147" id="5GA-xO-sHS"/>
+                                <constraint firstAttribute="height" constant="30" id="MAq-lW-l00"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="13"/>
+                            <state key="normal" title="GO TO SERIES">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="1" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="watchMoreButtonTapped:" destination="-1" eventType="touchUpInside" id="S0R-jl-QfQ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="UAj-Rp-Xgb" firstAttribute="centerX" secondItem="Alf-Oi-9yE" secondAttribute="centerX" id="4JF-6M-Q6h"/>
+                        <constraint firstItem="5iT-xv-jy2" firstAttribute="centerX" secondItem="UAj-Rp-Xgb" secondAttribute="centerX" id="Orl-At-YAV"/>
+                        <constraint firstItem="QKc-hW-vPX" firstAttribute="centerX" secondItem="UAj-Rp-Xgb" secondAttribute="centerX" id="QXW-l2-G7v"/>
+                        <constraint firstItem="1wB-1U-zVP" firstAttribute="leading" secondItem="Alf-Oi-9yE" secondAttribute="leading" id="Urv-az-dKD"/>
+                        <constraint firstAttribute="trailing" secondItem="1wB-1U-zVP" secondAttribute="trailing" id="Wl9-uv-EgJ"/>
+                        <constraint firstItem="1wB-1U-zVP" firstAttribute="top" secondItem="Alf-Oi-9yE" secondAttribute="top" id="lSa-WV-Krb"/>
+                        <constraint firstItem="UAj-Rp-Xgb" firstAttribute="centerY" secondItem="Alf-Oi-9yE" secondAttribute="centerY" id="oMc-Wk-wa9"/>
+                        <constraint firstItem="QKc-hW-vPX" firstAttribute="top" secondItem="UAj-Rp-Xgb" secondAttribute="bottom" constant="13" id="qEa-97-JiF"/>
+                        <constraint firstItem="UAj-Rp-Xgb" firstAttribute="top" secondItem="5iT-xv-jy2" secondAttribute="bottom" constant="3" id="siP-Pp-foe"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Vjx-F6-Itd" firstAttribute="leading" secondItem="UpM-dQ-IXC" secondAttribute="leading" id="3rR-5s-mc9"/>
+                <constraint firstItem="Lpu-7t-01z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="76Q-RK-gZW"/>
+                <constraint firstItem="Alf-Oi-9yE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="AAV-xX-nk7"/>
+                <constraint firstItem="UpM-dQ-IXC" firstAttribute="bottom" secondItem="Lpu-7t-01z" secondAttribute="bottom" id="DU6-Fc-Po7"/>
+                <constraint firstAttribute="bottom" secondItem="Alf-Oi-9yE" secondAttribute="bottom" id="Dol-0T-PJn"/>
+                <constraint firstItem="UpM-dQ-IXC" firstAttribute="top" secondItem="Lpu-7t-01z" secondAttribute="top" id="IBI-f8-505"/>
+                <constraint firstAttribute="trailing" secondItem="Alf-Oi-9yE" secondAttribute="trailing" id="N4g-nC-3lc"/>
+                <constraint firstItem="UpM-dQ-IXC" firstAttribute="leading" secondItem="Lpu-7t-01z" secondAttribute="leading" id="NVw-38-z51"/>
+                <constraint firstItem="Vjx-F6-Itd" firstAttribute="trailing" secondItem="UpM-dQ-IXC" secondAttribute="trailing" id="Qxd-Sd-MYx"/>
+                <constraint firstItem="Lpu-7t-01z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SXS-k9-awY"/>
+                <constraint firstAttribute="bottom" secondItem="Lpu-7t-01z" secondAttribute="bottom" id="dAp-gv-3bI"/>
+                <constraint firstItem="Alf-Oi-9yE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iS8-MG-a07"/>
+                <constraint firstAttribute="trailing" secondItem="Lpu-7t-01z" secondAttribute="trailing" id="ipf-m1-PBK"/>
+                <constraint firstItem="Vjx-F6-Itd" firstAttribute="bottom" secondItem="UpM-dQ-IXC" secondAttribute="bottom" id="pfB-Vi-TD7"/>
+                <constraint firstItem="UpM-dQ-IXC" firstAttribute="trailing" secondItem="Lpu-7t-01z" secondAttribute="trailing" id="poU-Go-vIG"/>
+                <constraint firstItem="Vjx-F6-Itd" firstAttribute="top" secondItem="UpM-dQ-IXC" secondAttribute="top" id="ujS-Xz-1ud"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-49" y="58"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="imgPlaceholder" width="62" height="116"/>
+        <image name="playerPause" width="68" height="68"/>
+        <image name="playerPlay" width="68" height="68"/>
+        <image name="playerRotate" width="20" height="20"/>
+        <image name="playerVolume" width="20" height="20"/>
+    </resources>
+</document>
